@@ -11,7 +11,7 @@ def main():
         paciente = input("Digite 1 ou 2: " )
 
         if paciente == "1":
-            tipo_exame()
+            sexo()
 
         elif paciente == "2":
             print ("Ok, encerrando.")
@@ -45,7 +45,7 @@ def sexo():
 
 
 def tipo_exameM():
-    print("Você gostaria de cadastrar quais tipos de exame?")
+    print("Você gostaria de cadastrar quais tipos de exame?")S
     print("1- Hemograma Completo")
     print("2- Glicemia")
     print("3- Creatina")
@@ -97,21 +97,169 @@ def hemograma():
     hematocrito = float(input("hematocrito"))
     hb_corp_média = float(input("hb_corp_média"))
     volume_corp_médio = float(input("volume_corp_médio"))
+    conc_hb_corp_media = float(input("Conc. Hb. Corp. Média: "))
     RDW = float(input("RDW"))
 
-    if hemacias == 5:
-        return "bom"
 
     print("LEUCOGRAMA")
     leucocitos = float(input("leucocitos "))
     metamielócitos = float(input("metamielócitos "))
-    bastoneres = float(input("bastoneres "))
+    bastonetes = float(input("bastoneres "))
     segmentados = float(input("segmentados: "))
     eosinófilos = float(input("eosinófilos: "))
     basofilos = float(input("basofilos: "))
     linfocitos = float(input("linfocitos: "))
     monocitos = float(input("monocitos: "))
     plaquetas = float(input("plaquetas: "))
+
+    if 4.5 >= hemacias >= 6:
+        return "está na média"
+    elif hemacias < 4.5:
+        return "abaixo da média"
+    
+    elif hemacias > 6:
+        return "acima da média"
+    
+    #########################
+    
+    if 13 >= hemoglobina >= 17.8:
+        return "está na média"
+    elif hemoglobina <13:
+        return "abaixo da média"
+    elif hemoglobina > 17.8:
+        return "acima da média"
+    
+    ########################
+    if 40>= hematocrito >= 54:
+        return "está na média"
+    elif hematocrito < 40:
+        return "abaixo da média"
+    elif hematocrito > 54:
+        return "acima da média"
+    
+    ##########################
+    if 4.5 >= hb_corp_média >= 6:
+        return "está na média"
+    elif hb_corp_média < 4.5:
+        return "abaixo da média"
+    
+    elif hb_corp_média > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= volume_corp_médio >= 6:
+        return "está na média"
+    elif volume_corp_médio < 4.5:
+        return "abaixo da média"
+    
+    elif volume_corp_médio > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= conc_hb_corp_media >= 6:
+        return "está na média"
+    elif conc_hb_corp_media < 4.5:
+        return "abaixo da média"
+    
+    elif conc_hb_corp_media > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= RDW >= 6:
+        return "está na média"
+    elif RDW < 4.5:
+        return "abaixo da média"
+    
+    elif RDW > 6:
+        return "acima da média"
+    
+    #########################
+    #leucograma
+    if 4.5 >= leucocitos >= 6:
+        return "está na média"
+    elif leucocitos < 4.5:
+        return "abaixo da média"
+    
+    elif leucocitos > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= metamielócitos >= 6:
+        return "está na média"
+    elif metamielócitos < 4.5:
+        return "abaixo da média"
+    
+    elif metamielócitos > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= bastonetes >= 6:
+        return "está na média"
+    elif bastonetes < 4.5:
+        return "abaixo da média"
+    
+    elif bastonetes > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= segmentados >= 6:
+        return "está na média"
+    elif segmentados < 4.5:
+        return "abaixo da média"
+    
+    elif segmentados > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= eosinófilos >= 6:
+        return "está na média"
+    elif eosinófilos < 4.5:
+        return "abaixo da média"
+    
+    elif eosinófilos > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= basofilos >= 6:
+        return "está na média"
+    elif basofilos < 4.5:
+        return "abaixo da média"
+    
+    elif basofilos > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= linfocitos >= 6:
+        return "está na média"
+    elif linfocitos < 4.5:
+        return "abaixo da média"
+    
+    elif linfocitos> 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= monocitos >= 6:
+        return "está na média"
+    elif monocitos < 4.5:
+        return "abaixo da média"
+    
+    elif monocitos > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= plaquetas >= 6:
+        return "está na média"
+    elif plaquetas < 4.5:
+        return "abaixo da média"
+    
+    elif plaquetas > 6:
+        return "acima da média"
+    
+    #########################
+
+
+    
+    
 
 
 ########################################
@@ -122,6 +270,13 @@ def glicemia():
     material = float(input("material: "))
     metodo = float(input("metodo: "))
 
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
 
 
 ########################################
@@ -134,6 +289,15 @@ def creatina():
     material = float(input("material: "))
     metodo = float(input("metodo: "))
 
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
+
 
 ########################################
 def acido_urico():
@@ -141,6 +305,15 @@ def acido_urico():
     resultado = float(input("resultado: "))
     material = float(input("material: "))
     metodo = float(input("metodo: "))
+
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
 
 
 ########################################
@@ -150,6 +323,15 @@ def tgo():
     material = float(input("material: "))
     metodo = float(input("metodo: "))
 
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
+
 ########################################
     
 def tgp():
@@ -157,6 +339,15 @@ def tgp():
     resultado = float(input("resultado: "))
     material = float(input("material: "))
     metodo = float(input("metodo: "))
+
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
 
 
 ########################################
@@ -168,6 +359,65 @@ def lipidograma():
     nhdl = float(input("colesterol Não-HDL: "))
     triglicerides = float(input("triglicerides: "))
 
+    if 4.5 >= colesterol >= 6:
+        return "está na média"
+    elif colesterol < 4.5:
+        return "abaixo da média"
+    
+    elif colesterol > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= hdl >= 6:
+        return "está na média"
+    elif hdl < 4.5:
+        return "abaixo da média"
+    
+    elif hdl > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= ldl >= 6:
+        return "está na média"
+    elif ldl < 4.5:
+        return "abaixo da média"
+    
+    elif ldl > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= vldl >= 6:
+        return "está na média"
+    elif vldl < 4.5:
+        return "abaixo da média"
+    
+    elif vldl > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= nhdl >= 6:
+        return "está na média"
+    elif nhdl < 4.5:
+        return "abaixo da média"
+    
+    elif nhdl > 6:
+        return "acima da média"
+    
+    #########################
+    if 4.5 >= triglicerides >= 6:
+        return "está na média"
+    elif triglicerides < 4.5:
+        return "abaixo da média"
+    
+    elif triglicerides > 6:
+        return "acima da média"
+    
+    #########################
+
+
+
+
+
 ########################################
 
 def hidroxivitamina():
@@ -175,6 +425,14 @@ def hidroxivitamina():
     resultado = float(input("resultado: "))
     material = float(input("material: "))
     metodo = float(input("metodo: "))
+
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
 
 ########################################
 
@@ -184,6 +442,14 @@ def tsh():
     material = float(input("material: "))
     metodo = float(input("metodo: "))
 
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
 ########################################
 
 def t4_livre():
@@ -191,6 +457,15 @@ def t4_livre():
     resultado = float(input("resultado: "))
     material = float(input("material: "))
     metodo = float(input("metodo: "))
+
+    if 4.5 >= resultado >= 6:
+        return "está na média"
+    elif resultado < 4.5:
+        return "abaixo da média"
+    
+    elif resultado > 6:
+        return "acima da média"
+
 ########################################
 def todos(): 
     pass
