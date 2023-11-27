@@ -221,7 +221,7 @@ def hemograma():
         print( "acima da média")
     
     #########################
-    if hemacias >=0 and hemacias <=2:
+    if basofilos >=0 and basofilos <=2:
         print( "está na média")
     elif basofilos < 0:
         print( "abaixo da média")
@@ -230,7 +230,7 @@ def hemograma():
         print( "acima da média")
     
     #########################
-    if hemacias >=18 and hemacias <=44:
+    if linfocitos >=18 and linfocitos <=44:
         print( "está na média")
     elif linfocitos < 18:
         print( "abaixo da média")
@@ -239,7 +239,7 @@ def hemograma():
         print( "acima da média")
     
     #########################
-    if hemacias >=2 and hemacias <=12:
+    if monocitos>=2 and monocitos <=12:
         print( "está na média")
     elif monocitos < 2:
         print( "abaixo da média")
@@ -247,7 +247,7 @@ def hemograma():
     elif monocitos > 12:
         print( "acima da média")
     #########################
-    if hemacias >=150000 and hemacias <=450000:
+    if plaquetas >=150000 and plaquetas <=450000:
         print( "está na média")
     elif plaquetas < 150000:
         print( "abaixo da média")
@@ -665,7 +665,7 @@ def hemogramaF():
         print( "acima da média")
     
     #########################
-    if hemacias >=0 and hemacias <=2:
+    if basofilos >=0 and basofilos <=2:
         print( "está na média")
     elif basofilos < 0:
         print( "abaixo da média")
@@ -674,7 +674,7 @@ def hemogramaF():
         print( "acima da média")
     
     #########################
-    if hemacias >=18 and hemacias <=44:
+    if linfocitos >=18 and linfocitos <=44:
         print( "está na média")
     elif linfocitos < 18:
         print( "abaixo da média")
@@ -683,7 +683,7 @@ def hemogramaF():
         print( "acima da média")
     
     #########################
-    if hemacias >=2 and hemacias <=12:
+    if monocitos >=2 and monocitos <=12:
         print( "está na média")
     elif monocitos < 2:
         print( "abaixo da média")
@@ -691,7 +691,7 @@ def hemogramaF():
     elif monocitos > 12:
         print( "acima da média")
     #########################
-    if hemacias >=150000 and hemacias <=450000:
+    if plaquetas >=150000 and plaquetas <=450000:
         print( "está na média")
     elif plaquetas < 150000:
         print( "abaixo da média")
