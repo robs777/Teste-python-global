@@ -21,16 +21,17 @@ def main():
             print(f'Opção {paciente} inválida. Digite apenas sim ou não.')
 
 def sexo():
-    print("Informe seu sexo biológico")
-    print ("M = masculino // F = feminino")
-    paciente = input("Digite M ou F: ")
-    if paciente == "M" or "m":
-        tipo_exameM()
-    elif paciente == "F" or "f":
-        tipo_exameF()
+    while True:
+        print("Informe seu sexo biológico")
+        print ("M = masculino // F = feminino")
+        paciente = input("Digite M ou F: ")
+        if paciente == "M" or "m":
+            tipo_exameM()
+        elif paciente == "F" or "f":
+            tipo_exameF()
 
-    else:
-        print(f"Opção {paciente} inválida. Digite apenas a letra M ou F")
+        else:
+            print(f"Opção {paciente} inválida. Digite apenas a letra M ou F")
 
 
 
@@ -45,48 +46,49 @@ def sexo():
 
 
 def tipo_exameM():
-    print("Você gostaria de receber resultados de quais tipos de exame?")
-    print("1- Hemograma Completo")
-    print("2- Glicemia")
-    print("3- Creatina")
-    print("4- Ácido úrico")
-    print("5- Transaminase Glutamico Oxalacética - TGO")
-    print("6- Trasaminase Glutamico Pirúvica - TGP")
-    print("7- Lipidograma Completo")
-    print("8- 25-Hidroxivitamina D")
-    print("9- TSH Ultra Sensível")
-    print("10- T4 Livre")
-    print("11 - Opção para receber resultados de todos os exames")
+    while True:
+        print("Você gostaria de receber resultados de quais tipos de exame?")
+        print("1- Hemograma Completo")
+        print("2- Glicemia")
+        print("3- Creatina")
+        print("4- Ácido úrico")
+        print("5- Transaminase Glutamico Oxalacética - TGO")
+        print("6- Trasaminase Glutamico Pirúvica - TGP")
+        print("7- Lipidograma Completo")
+        print("8- 25-Hidroxivitamina D")
+        print("9- TSH Ultra Sensível")
+        print("10- T4 Livre")
+        print("11 - Opção para receber resultados de todos os exames")
 
-    paciente = input("Digite sua escolha: ")
+        paciente = input("Digite sua escolha: ")
 
-    if paciente == "1": 
-        hemograma()
+        if paciente == "1": 
+            hemograma()
 
-    elif paciente =="2":
-        glicemia()
+        elif paciente =="2":
+            glicemia()
 
-    elif paciente =="3":
-        creatina()
-        
-    elif paciente =="4":
-        acido_urico()
-    elif paciente =="5":
-        tgo()
-    elif paciente =="6":
-        tgp()
-    elif paciente =="7":
-        lipidograma()
-    elif paciente =="8":
-        hidroxivitamina()
-    elif paciente =="9":
-        tsh()
-    elif paciente =="10":
-        t4_livre()
-    elif paciente =="11":
-        todos()
-    else:
-        print(f"Opção {paciente} inválida. Digite Novamente.")
+        elif paciente =="3":
+            creatina()
+            
+        elif paciente =="4":
+            acido_urico()
+        elif paciente =="5":
+            tgo()
+        elif paciente =="6":
+            tgp()
+        elif paciente =="7":
+            lipidograma()
+        elif paciente =="8":
+            hidroxivitamina()
+        elif paciente =="9":
+            tsh()
+        elif paciente =="10":
+            t4_livre()
+        elif paciente =="11":
+            todos()
+        else:
+            print(f"Opção {paciente} inválida. Digite Novamente.")
 
     
 
@@ -99,7 +101,7 @@ def hemograma():
     hb_corp_média = input("Hb corp média: ")
     volume_corp_médio = input("Volume corp médio: ")
     conc_hb_corp_media = input("Conc. Hb. Corp. Média: ")
-    RDW = input("RDW")
+    RDW = input("RDW: ")
 
 
     print("LEUCOGRAMA")
@@ -491,48 +493,49 @@ def todos():
 ###################################
 
 def tipo_exameF():
-    print("Você gostaria de cadastrar quais tipos de exame?")
-    print("1- Hemograma Completo")
-    print("2- Glicemia")
-    print("3- Creatina")
-    print("4- Ácido úrico")
-    print("5- Transaminase Glutamico Oxalacética - TGO")
-    print("6- Trasaminase Glutamico Pirúvica - TGP")
-    print("7- Lipidograma Completo")
-    print("8- 25-Hidroxivitamina D")
-    print("9- TSH Ultra Sensível")
-    print("10- T4 Livre")
-    print("11 - Opção para cadastrar todos os exames")
+    while True:
+        print("Você gostaria de cadastrar quais tipos de exame?")
+        print("1- Hemograma Completo")
+        print("2- Glicemia")
+        print("3- Creatina")
+        print("4- Ácido úrico")
+        print("5- Transaminase Glutamico Oxalacética - TGO")
+        print("6- Trasaminase Glutamico Pirúvica - TGP")
+        print("7- Lipidograma Completo")
+        print("8- 25-Hidroxivitamina D")
+        print("9- TSH Ultra Sensível")
+        print("10- T4 Livre")
+        print("11 - Opção para cadastrar todos os exames")
 
-    paciente = input("Digite sua escolha: ")
+        paciente = input("Digite sua escolha: ")
 
-    if paciente == "1": 
-        hemogramaF()
+        if paciente == "1": 
+            hemogramaF()
 
-    elif paciente =="2":
-        glicemiaF()
+        elif paciente =="2":
+            glicemiaF()
 
-    elif paciente =="3":
-        creatinaF()
-        
-    elif paciente =="4":
-        acido_uricoF()
-    elif paciente =="5":
-        tgoF()
-    elif paciente =="6":
-        tgpF()
-    elif paciente =="7":
-        lipidogramaF()
-    elif paciente =="8":
-        hidroxivitaminaF()
-    elif paciente =="9":
-        tshF()
-    elif paciente =="10":
-        t4_livreF()
-    elif paciente =="11":
-        todosF()
-    else:
-        print(f"Opção {paciente} inválida. Digite Novamente.")
+        elif paciente =="3":
+            creatinaF()
+            
+        elif paciente =="4":
+            acido_uricoF()
+        elif paciente =="5":
+            tgoF()
+        elif paciente =="6":
+            tgpF()
+        elif paciente =="7":
+            lipidogramaF()
+        elif paciente =="8":
+            hidroxivitaminaF()
+        elif paciente =="9":
+            tshF()
+        elif paciente =="10":
+            t4_livreF()
+        elif paciente =="11":
+            todosF()
+        else:
+            print(f"Opção {paciente} inválida. Digite Novamente.")
 
 
 def hemogramaF():
@@ -544,7 +547,7 @@ def hemogramaF():
     hb_corp_média = input("Hb corp média: ")
     volume_corp_médio = input("Volume corp médio: ")
     conc_hb_corp_media = input("Conc. Hb. Corp. Média: ")
-    RDW = input("RDW")
+    RDW = input("RDW: ")
 
 
     print("LEUCOGRAMA")
