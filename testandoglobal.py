@@ -15,7 +15,7 @@ def main():
 
         elif paciente == "2":
             print ("Ok, encerrando.")
-            break
+            exit()
 
         else:
             print(f'Opção {paciente} inválida. Digite apenas sim ou não.')
@@ -25,9 +25,9 @@ def sexo():
         print("Informe seu sexo biológico")
         print ("M = masculino // F = feminino")
         paciente = input("Digite M ou F: ")
-        if paciente == "M" or "m":
+        if paciente == "M":
             tipo_exameM()
-        elif paciente == "F" or "f":
+        elif paciente == "F":
             tipo_exameF()
 
         else:
@@ -59,6 +59,9 @@ def tipo_exameM():
         print("9- TSH Ultra Sensível")
         print("10- T4 Livre")
         print("11 - Opção para receber resultados de todos os exames")
+        print("-"*30)
+        print("CASO QUEIRA SAIR, DIGITE: 12")
+        print("-"*30)
 
         paciente = input("Digite sua escolha: ")
 
@@ -87,174 +90,190 @@ def tipo_exameM():
             t4_livre()
         elif paciente =="11":
             todos()
+        elif paciente =="12":
+            exit()
         else:
             print(f"Opção {paciente} inválida. Digite Novamente.")
 
     
+def leiaInt(msg):
+    ok = False
+    valor = 0 
+    while True:
+         n = str(input(msg))
+         if n.isnumeric():
+             valor = int(n)
+             ok = True
+         else:
+             print("digite um número ")
+         if ok:
+             break
+    return valor
+
 
 def hemograma():
     print("Coloque os valores de cada requisito")
     print ("ERITROGRAMA")
-    hemacias = input("Hemácias: ")
-    hemoglobina = input("Hemoglobina: ")
-    hematocrito = input("Hematocrito: ")
-    hb_corp_média = input("Hb corp média: ")
-    volume_corp_médio = input("Volume corp médio: ")
-    conc_hb_corp_media = input("Conc. Hb. Corp. Média: ")
-    RDW = input("RDW: ")
+    hemacias = leiaInt("Hemácias: ")
+    hemoglobina = leiaInt("Hemoglobina: ")
+    hematocrito = leiaInt("Hematocrito: ")
+    hb_corp_média = leiaInt("Hb corp média: ")
+    volume_corp_médio = leiaInt("Volume corp médio: ")
+    conc_hb_corp_media = leiaInt("Conc. Hb. Corp. Média: ")
+    RDW = leiaInt("RDW: ")
 
 
     print("LEUCOGRAMA")
-    leucocitos = input("Leucocitos: ")
-    metamielócitos = input("Metamielócitos: ")
-    bastonetes = input("Bastoneres: ")
-    segmentados = input("Segmentados: ")
-    eosinofilos = input("Eosinófilos: ")
-    basofilos = input("Basofilos: ")
-    linfocitos = input("Linfocitos: ")
-    monocitos = input("Monocitos: ")
-    plaquetas = input("Plaquetas: ")
+    leucocitos = leiaInt("Leucocitos: ")
+    metamielócitos = leiaInt("Metamielócitos: ")
+    bastonetes = leiaInt("Bastoneres: ")
+    segmentados = leiaInt("Segmentados: ")
+    eosinofilos = leiaInt("Eosinófilos: ")
+    basofilos = leiaInt("Basofilos: ")
+    linfocitos = leiaInt("Linfocitos: ")
+    monocitos = leiaInt("Monocitos: ")
+    plaquetas = leiaInt("Plaquetas: ")
 
-    if hemacias >="4.5" and hemacias <="6":
+    if hemacias >=4.5 and hemacias <=6:
         print( "Hemácias: está na média")
-    elif hemacias < "4.5":
+    elif hemacias < 4.5:
         print( "Hemácias: abaixo da média")
     
-    elif hemacias > "6":
+    elif hemacias > 6:
         print( "Hemácias: acima da média")
     
     #########################
     
-    if hemoglobina >="13" and hemoglobina <="17.8":
+    if hemoglobina >=13 and hemoglobina <=17.8:
         print( "Hemoglobina: está na média")
-    elif hemoglobina <"13":
+    elif hemoglobina <13:
         print( "Hemoglobina: abaixo da média")
-    elif hemoglobina > "17.8":
+    elif hemoglobina > 17.8:
         print( "Hemoglobina: acima da média")
     
     ########################
-    if hematocrito >="40" and hematocrito <="54":
+    if hematocrito >=40 and hematocrito <=54:
         print( "Hematocrito: está na média")
-    elif hematocrito < "40":
+    elif hematocrito < 40:
         print( "Hematocrito: abaixo da média")
-    elif hematocrito > "54":
+    elif hematocrito > 54:
         print( "Hematocrito: acima da média")
     
     ##########################
-    if hb_corp_média >="27" and hb_corp_média <="33":
+    if hb_corp_média >=27 and hb_corp_média <=33:
         print( "Hb corp média: está na média")
-    elif hb_corp_média < "27":
+    elif hb_corp_média < 27:
         print( "Hb corp média: abaixo da média")
     
-    elif hb_corp_média > "33":
+    elif hb_corp_média > 33:
         print( "Hb corp média: acima da média")
     
     #########################
-    if volume_corp_médio >="80" and volume_corp_médio <="100":
+    if volume_corp_médio >=80 and volume_corp_médio <=100:
         print( "Volume corp médio: está na média")
-    elif volume_corp_médio < "80":
+    elif volume_corp_médio < 80:
         print( "Volume corp médio: abaixo da média")
     
-    elif volume_corp_médio > "100":
+    elif volume_corp_médio > 100:
         print( "Volume corp médio: acima da média")
     
     #########################
-    if conc_hb_corp_media >="30" and conc_hb_corp_media <="36":
+    if conc_hb_corp_media >=30 and conc_hb_corp_media <=36:
         print( "Conc. Hb. Corp. Média: está na média")
-    elif conc_hb_corp_media < "30":
+    elif conc_hb_corp_media < 30:
         print( "Conc. Hb. Corp. Média: abaixo da média")
     
-    elif conc_hb_corp_media > "36":
+    elif conc_hb_corp_media > 36:
         print( "Conc. Hb. Corp. Média: acima da média")
     
     #########################
-    if RDW >="11" and RDW <="14.5":
+    if RDW >=11 and RDW <=14.5:
         print( "RDW: está na média")
-    elif RDW < "11":
+    elif RDW < 11:
         print( "RDW: abaixo da média")
     
-    elif RDW > "14.5":
+    elif RDW > 14.5:
         print( "RDW: acima da média")
     
     #########################
     #leucograma
-    if leucocitos >="3900" and leucocitos <="12100":
+    if leucocitos >=3900 and leucocitos <=12100:
         print( "Leucocitos: está na média")
-    elif leucocitos < "3900":
+    elif leucocitos < 3900:
         print( "Leucocitos: abaixo da média")
     
-    elif leucocitos > "12100":
+    elif leucocitos > 12100:
         print( "Leucocitos: acima da média")
     
     #########################
-    if metamielócitos =="0":
+    if metamielócitos ==0:
         print( "Metamielócitos: está na média")
-    elif metamielócitos < "0":
+    elif metamielócitos < 0:
         print( "Metamielócitos: abaixo da média")
     
-    elif metamielócitos > "0":
+    elif metamielócitos > 0:
        print("Metamielócitos: acima da média")
     
     #########################
-    if bastonetes >="1" and bastonetes <="6":
+    if bastonetes >=1 and bastonetes <=6:
         print( "Bastonetes: está na média")
-    elif bastonetes < "1":
+    elif bastonetes < 1:
         print( "Bastonetes: abaixo da média")
     
-    elif bastonetes > "6":
+    elif bastonetes > 6:
         print( "Bastonetes: acima da média")
     
     #########################
-    if segmentados >="50" and segmentados <="68":
+    if segmentados >=50 and segmentados <=68:
         print( "Segmentados: está na média")
-    elif segmentados < "50":
+    elif segmentados < 50:
         print( "Segmentados: abaixo da média")
     
-    elif segmentados > "68":
+    elif segmentados > 68:
         print( "Segmentados: acima da média")
     
     #########################
-    if eosinofilos >="1" and eosinofilos <="8":
+    if eosinofilos >=1 and eosinofilos <=8:
         print( "Eosinófilos: está na média")
-    elif eosinofilos < "1":
+    elif eosinofilos < 1:
         print("Eosinófilos: abaixo da média")
     
-    elif eosinofilos > "8":
+    elif eosinofilos > 8:
         print( "Eosinófilos: acima da média")
     
     #########################
-    if basofilos >="0" and basofilos <="2":
+    if basofilos >=0 and basofilos <=2:
         print( "Basófilos: está na média")
-    elif basofilos < "0":
+    elif basofilos < 0:
         print( "Basófilos: abaixo da média")
     
-    elif basofilos > "2":
+    elif basofilos > 2:
         print( "Basófilos: acima da média")
     
     #########################
-    if linfocitos >="18" and linfocitos <="44":
+    if linfocitos >=18 and linfocitos <=44:
         print( "Linfócitos: está na média")
-    elif linfocitos < "18":
+    elif linfocitos < 18:
         print( "Linfócitos: abaixo da média")
     
-    elif linfocitos> "44":
+    elif linfocitos> 44:
         print( "Linfócitos: acima da média")
     
     #########################
-    if monocitos>="2" and monocitos <="12":
+    if monocitos>=2 and monocitos <=12:
         print( "Monócitos: está na média")
-    elif monocitos < "2":
+    elif monocitos < 2:
         print( "Monócitos: abaixo da média")
     
-    elif monocitos > "12":
+    elif monocitos > 12:
         print( "Monócitos: acima da média")
     #########################
-    if plaquetas >="150000" and plaquetas <="450000":
+    if plaquetas >=150000 and plaquetas <=450000:
         print( "Plaquetas: está na média")
-    elif plaquetas < "150000":
+    elif plaquetas < 150000:
         print( "Plaquetas: abaixo da média")
     
-    elif plaquetas > "450000":
+    elif plaquetas > 450000:
         print( "Plaquetas: acima da média")
     
     #########################
@@ -268,16 +287,16 @@ def hemograma():
 
 def glicemia():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="60" and resultado<= "99":
+    if resultado >=60 and resultado<= 99:
         print ("Glicemia: está na média")
-    elif resultado < "60":
+    elif resultado < 60:
         print ("Glicemia: abaixo da média")
     
-    elif resultado > "99":
+    elif resultado > 99:
         print("Glicemia: acima da média")
    
     
@@ -291,32 +310,32 @@ def glicemia():
 
 def creatina():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.76" and resultado<= "1.24":
+    if resultado >=0.76 and resultado<= 1.24:
         print ("Creatina: está na média")
-    elif resultado < "0.76":
+    elif resultado < 0.76:
         print("Creatina: abaixo da média")
     
-    elif resultado > "1.24":
+    elif resultado > 1.24:
         print("Creatina: acima da média")
 
 
 ########################################
 def acido_urico():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="3.7" and resultado<= "7.8":
+    if resultado >=3.7 and resultado<= 7.8:
         print("Ácido úrico: está na média")
-    elif resultado < "3.7":
+    elif resultado < 3.7:
         print("Ácido úrico: abaixo da média")
     
-    elif resultado > "7.8":
+    elif resultado > 7.8:
         print("Ácido úrico: acima da média")
 
 
@@ -324,14 +343,14 @@ def acido_urico():
 ########################################
 def tgo():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
     
-    if resultado <= "40":
+    if resultado <= 40:
         print("TGO: na média")
     
-    elif resultado > "40":
+    elif resultado > 40:
         print("TGO: acima da média")
 
 
@@ -339,79 +358,79 @@ def tgo():
     
 def tgp():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado <= "58":
+    if resultado <= 58:
         print("TGP: na média")
     
-    elif resultado > "58":
+    elif resultado > 58:
         print("TGP: acima da média")
 
 
 
 ########################################
 def lipidograma():
-    colesterol = input("Colesterol total: ")
-    hdl = input("Colesterol HDL: ")
-    ldl = input("Colesterol LDL: ")
-    nhdl = input("Colesterol Não-HDL: ")
-    triglicerides = input("Triglicerides: ")
+    colesterol = leiaInt("Colesterol total: ")
+    hdl = leiaInt("Colesterol HDL: ")
+    ldl = leiaInt("Colesterol LDL: ")
+    nhdl = leiaInt("Colesterol Não-HDL: ")
+    triglicerides = leiaInt("Triglicerides: ")
 
-    if colesterol <= "190":
+    if colesterol <= 190:
         print("Colesterol: na média")
     
-    elif colesterol > "190":
+    elif colesterol > 190:
         print("Colesterol: acima da média")
     
     #########################
-    if hdl >= "40":
+    if hdl >= 40:
         print("HDL: na média")
     
-    elif hdl < "40":
+    elif hdl < 40:
         print("HDL: abaixo da média")
     
     #########################
-    if ldl <= "130":
+    if ldl <= 130:
         print("LDL: risco baixo")
 
-    elif ldl <="100":
+    elif ldl <=100:
         print("LDL: risco intermediario")
 
-    elif ldl <="70":
+    elif ldl <=70:
         print("LDL: risco alto")
 
-    elif ldl <="50":
+    elif ldl <=50:
         print("LDL: risco muito alto")
     
-    elif ldl > "130":
+    elif ldl > 130:
         print( "LDL: acima da média")
 
     
     
     #########################
     
-    if nhdl <= "160":
+    if nhdl <= 160:
         print("Não-HDL: risco baixo")
 
-    elif nhdl <="130":
+    elif nhdl <=130:
         print("Não-HDL: risco intermediario")
 
-    elif nhdl <="100":
+    elif nhdl <=100:
         print("Não-HDL: risco alto")
 
-    elif nhdl <="80":
+    elif nhdl <=80:
         print("Não-HDL: risco muito alto")
     
-    elif nhdl > "160":
+    elif nhdl > 160:
         print( "Não-HDL: acima da média")
     
     #########################
-    if triglicerides < "150":
+    if triglicerides < 150:
         print( "Triglicerides: está na média")
     
-    elif triglicerides > "150":
+    elif triglicerides > 150:
         print( "Triglicerides: acima da média")
     
     #########################
@@ -424,47 +443,47 @@ def lipidograma():
 
 def hidroxivitamina():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
     
-    if resultado > "20":
+    if resultado > 20:
         print( "Hidroxivitamina: saudável")
     
-    elif resultado < "20":
+    elif resultado < 20:
         print( "Hidroxivitamina: não saudável")
 
 ########################################
 
 def tsh():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.38" and resultado<= "5.33":
+    if resultado >=0.38 and resultado<= 5.33:
         print( "TSH: está na média")
-    elif resultado < "0.38":
+    elif resultado < 0.38:
         print( "TSH: abaixo da média")
     
-    elif resultado > "5.33":
+    elif resultado > 5.33:
         print( "TSH: acima da média")
 
 ########################################
 
 def t4_livre():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.54" and resultado<= "1.24":
+    if resultado >=0.54 and resultado<= 1.24:
         print( "T4 Livre: está na média")
-    elif resultado < "0.54":
+    elif resultado < 0.54:
         print( "T4 Livre: abaixo da média")
     
-    elif resultado > "1.24":
+    elif resultado > 1.24:
         print("T4 Livre: acima da média")
 
 ########################################
@@ -479,7 +498,7 @@ def todos():
     hidroxivitamina()
     tsh()
     t4_livre()
-    exit()
+   
 
     
 
@@ -541,166 +560,166 @@ def tipo_exameF():
 def hemogramaF():
     print("Coloque os valores de cada requisito")
     print ("ERITROGRAMA")
-    hemacias = input("Hemácias: ")
-    hemoglobina = input("Hemoglobina: ")
-    hematocrito = input("Hematocrito: ")
-    hb_corp_média = input("Hb corp média: ")
-    volume_corp_médio = input("Volume corp médio: ")
-    conc_hb_corp_media = input("Conc. Hb. Corp. Média: ")
-    RDW = input("RDW: ")
+    hemacias = leiaInt("Hemácias: ")
+    hemoglobina = leiaInt("Hemoglobina: ")
+    hematocrito = leiaInt("Hematocrito: ")
+    hb_corp_média = leiaInt("Hb corp média: ")
+    volume_corp_médio = leiaInt("Volume corp médio: ")
+    conc_hb_corp_media = leiaInt("Conc. Hb. Corp. Média: ")
+    RDW = leiaInt("RDW: ")
 
 
     print("LEUCOGRAMA")
-    leucocitos = input("Leucocitos: ")
-    metamielócitos = input("Metamielócitos: ")
-    bastonetes = input("Bastoneres: ")
-    segmentados = input("Segmentados: ")
-    eosinofilos = input("Eosinófilos: ")
-    basofilos = input("Basofilos: ")
-    linfocitos = input("Linfocitos: ")
-    monocitos = input("Monocitos: ")
-    plaquetas = input("Plaquetas: ")
+    leucocitos = leiaInt("Leucocitos: ")
+    metamielócitos = leiaInt("Metamielócitos: ")
+    bastonetes = leiaInt("Bastoneres: ")
+    segmentados = leiaInt("Segmentados: ")
+    eosinofilos = leiaInt("Eosinófilos: ")
+    basofilos = leiaInt("Basofilos: ")
+    linfocitos = leiaInt("Linfocitos: ")
+    monocitos = leiaInt("Monocitos: ")
+    plaquetas = leiaInt("Plaquetas: ")
 
-    if hemacias >="3.7" and hemacias <="5.2":
+    if hemacias >=3.7 and hemacias <=5.2:
         print( "Hemácias: está na média")
-    elif hemacias < "3.7":
+    elif hemacias < 3.7:
         print( "Hemácias: abaixo da média")
     
-    elif hemacias > "5.2":
+    elif hemacias > 5.2:
         print( "Hemácias: acima da média")
     
     #########################
     
-    if hemoglobina >="11" and hemoglobina <="16":
+    if hemoglobina >=11 and hemoglobina <=16:
         print( "Hemoglobina: está na média")
-    elif hemoglobina <"11":
+    elif hemoglobina <11:
         print( "Hemoglobina: abaixo da média")
-    elif hemoglobina > "16":
+    elif hemoglobina > 16:
         print( "Hemoglobina: acima da média")
     
     ########################
-    if hematocrito >="36" and hematocrito <="47":
+    if hematocrito >=36 and hematocrito <=47:
         print( "Hematocrito: está na média")
-    elif hematocrito < "36":
+    elif hematocrito < 36:
         print( "Hematocrito: abaixo da média")
-    elif hematocrito > "47":
+    elif hematocrito > 47:
         print( "Hematocrito: acima da média")
     
     ##########################
-    if hb_corp_média >="27" and hb_corp_média <="33":
+    if hb_corp_média >=27 and hb_corp_média <=33:
         print( "Hb corp média: está na média")
-    elif hb_corp_média < "27":
+    elif hb_corp_média < 27:
         print( "Hb corp média: abaixo da média")
     
-    elif hb_corp_média > "33":
+    elif hb_corp_média > 33:
         print( "Hb corp média: acima da média")
     
     #########################
-    if volume_corp_médio >="80" and volume_corp_médio <="100":
+    if volume_corp_médio >=80 and volume_corp_médio <=100:
         print( "Volume corp médio: está na média")
-    elif volume_corp_médio < "80":
+    elif volume_corp_médio < 80:
         print( "Volume corp médio: abaixo da média")
     
-    elif volume_corp_médio > "100":
+    elif volume_corp_médio > 100:
         print( "Volume corp médio: acima da média")
     
     #########################
-    if conc_hb_corp_media >="30" and conc_hb_corp_media <="36":
+    if conc_hb_corp_media >=30 and conc_hb_corp_media <=36:
         print( "Conc. Hb. Corp. Média: está na média")
-    elif conc_hb_corp_media < "30":
+    elif conc_hb_corp_media < 30:
         print( "Conc. Hb. Corp. Média: abaixo da média")
     
-    elif conc_hb_corp_media > "36":
+    elif conc_hb_corp_media > 36:
         print( "Conc. Hb. Corp. Média: acima da média")
     
     #########################
-    if RDW >="11" and RDW <="14.5":
+    if RDW >=11 and RDW <=14.5:
         print( "RDW: está na média")
-    elif RDW < "11":
+    elif RDW < 11:
         print( "RDW: abaixo da média")
     
-    elif RDW > "14.5":
+    elif RDW > 14.5:
         print( "RDW: acima da média")
     
     #########################
     #leucograma
-    if leucocitos >="3900" and leucocitos <="12100":
+    if leucocitos >=3900 and leucocitos <=12100:
         print( "Leucocitos: está na média")
-    elif leucocitos < "3900":
+    elif leucocitos < 3900:
         print( "Leucocitos: abaixo da média")
     
-    elif leucocitos > "12100":
+    elif leucocitos > 12100:
         print( "Leucocitos: acima da média")
     
     #########################
-    if metamielócitos =="0":
+    if metamielócitos ==0:
         print( "Metamielócitos: está na média")
-    elif metamielócitos < "0":
+    elif metamielócitos < 0:
         print( "Metamielócitos: abaixo da média")
     
-    elif metamielócitos > "0":
+    elif metamielócitos > 0:
        print("Metamielócitos: acima da média")
     
     #########################
-    if bastonetes >="1" and bastonetes <="6":
+    if bastonetes >=1 and bastonetes <=6:
         print( "Bastonetes: está na média")
-    elif bastonetes < "1":
+    elif bastonetes < 1:
         print( "Bastonetes: abaixo da média")
     
-    elif bastonetes > "6":
+    elif bastonetes > 6:
         print( "Bastonetes: acima da média")
     
     #########################
-    if segmentados >="50" and segmentados <="68":
+    if segmentados >=50 and segmentados <=68:
         print( "Segmentados: está na média")
-    elif segmentados < "50":
+    elif segmentados < 50:
         print( "Segmentados: abaixo da média")
     
-    elif segmentados > "68":
+    elif segmentados > 68:
         print( "Segmentados: acima da média")
     
     #########################
-    if eosinofilos >="1" and eosinofilos <="8":
+    if eosinofilos >=1 and eosinofilos <=8:
         print( "Eosinófilos: está na média")
-    elif eosinofilos < "1":
+    elif eosinofilos < 1:
         print("Eosinófilos: abaixo da média")
     
-    elif eosinofilos > "8":
+    elif eosinofilos > 8:
         print( "Eosinófilos: acima da média")
     
     #########################
-    if basofilos >="0" and basofilos <="2":
+    if basofilos >=0 and basofilos <=2:
         print( "Basófilos: está na média")
-    elif basofilos < "0":
+    elif basofilos < 0:
         print( "Basófilos: abaixo da média")
     
-    elif basofilos > "2":
+    elif basofilos > 2:
         print( "Basófilos: acima da média")
     
     #########################
-    if linfocitos >="18" and linfocitos <="44":
+    if linfocitos >=18 and linfocitos <=44:
         print( "Linfócitos: está na média")
-    elif linfocitos < "18":
+    elif linfocitos < 18:
         print( "Linfócitos: abaixo da média")
     
-    elif linfocitos> "44":
+    elif linfocitos> 44:
         print( "Linfócitos: acima da média")
     
     #########################
-    if monocitos>="2" and monocitos <="12":
+    if monocitos>=2 and monocitos <=12:
         print( "Monócitos: está na média")
-    elif monocitos < "2":
+    elif monocitos < 2:
         print( "Monócitos: abaixo da média")
     
-    elif monocitos > "12":
+    elif monocitos > 12:
         print( "Monócitos: acima da média")
     #########################
-    if plaquetas >="150000" and plaquetas <="450000":
+    if plaquetas >=150000 and plaquetas <=450000:
         print( "Plaquetas: está na média")
-    elif plaquetas < "150000":
+    elif plaquetas < 150000:
         print( "Plaquetas: abaixo da média")
     
-    elif plaquetas > "450000":
+    elif plaquetas > 450000:
         print( "Plaquetas: acima da média")
     
     #########################
@@ -714,16 +733,16 @@ def hemogramaF():
 
 def glicemiaF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="60" and resultado<= "99":
+    if resultado >=60 and resultado<= 99:
         print ("Glicemia: está na média")
-    elif resultado < "60":
+    elif resultado < 60:
         print ("Glicemia: abaixo da média")
     
-    elif resultado > "99":
+    elif resultado > 99:
         print("Glicemia: acima da média")
    
     
@@ -737,32 +756,32 @@ def glicemiaF():
 
 def creatinaF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.4" and resultado<= "1":
+    if resultado >=0.4 and resultado<= 1:
         print ("Creatina: está na média")
-    elif resultado < "0.4":
+    elif resultado < 0.4:
         print("Creatina: abaixo da média")
     
-    elif resultado > "1":
+    elif resultado > 1:
         print("Creatina: acima da média")
 
 
 ########################################
 def acido_uricoF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="2.8" and resultado<= "6.5":
+    if resultado >=2.8 and resultado<= 6.5:
         print("Ácido úrico: está na média")
-    elif resultado < "2.8":
+    elif resultado < 2.8:
         print("Ácido úrico: abaixo da média")
     
-    elif resultado > "6.5":
+    elif resultado > 6.5:
         print("Ácido úrico: acima da média")
 
 
@@ -770,14 +789,14 @@ def acido_uricoF():
 ########################################
 def tgoF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
     
-    if resultado <= "33":
+    if resultado <= 33:
         print("TGO: na média")
     
-    elif resultado > "33":
+    elif resultado > 33:
         print("TGO: acima da média")
 
 
@@ -785,79 +804,79 @@ def tgoF():
     
 def tgpF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado <= "41":
+    if resultado <= 41:
         print("TGP: na média")
     
-    elif resultado > "41":
+    elif resultado > 41:
         print("TGP: acima da média")
 
 
 
 ########################################
 def lipidogramaF():
-    colesterol = input("Colesterol total: ")
-    hdl = input("Colesterol HDL: ")
-    ldl = input("Colesterol LDL: ")
-    nhdl = input("Colesterol Não-HDL: ")
-    triglicerides = input("Triglicerides: ")
+    colesterol = leiaInt("Colesterol total: ")
+    hdl = leiaInt("Colesterol HDL: ")
+    ldl = leiaInt("Colesterol LDL: ")
+    nhdl = leiaInt("Colesterol Não-HDL: ")
+    triglicerides = leiaInt("Triglicerides: ")
 
-    if colesterol <= "190":
+    if colesterol <= 190:
         print("Colesterol: na média")
     
-    elif colesterol > "190":
+    elif colesterol > 190:
         print("Colesterol: acima da média")
     
     #########################
-    if hdl >= "40":
+    if hdl >= 40:
         print("HDL: na média")
     
-    elif hdl < "40":
+    elif hdl < 40:
         print("HDL: abaixo da média")
     
     #########################
-    if ldl <= "130":
+    if ldl <= 130:
         print("LDL: risco baixo")
 
-    elif ldl <="100":
+    elif ldl <=100:
         print("LDL: risco intermediario")
 
-    elif ldl <="70":
+    elif ldl <=70:
         print("LDL: risco alto")
 
-    elif ldl <="50":
+    elif ldl <=50:
         print("LDL: risco muito alto")
     
-    elif ldl > "130":
+    elif ldl > 130:
         print( "LDL: acima da média")
 
     
     
     #########################
     
-    if nhdl <= "160":
+    if nhdl <= 160:
         print("Não-HDL: risco baixo")
 
-    elif nhdl <="130":
+    elif nhdl <=130:
         print("Não-HDL: risco intermediario")
 
-    elif nhdl <="100":
+    elif nhdl <=100:
         print("Não-HDL: risco alto")
 
-    elif nhdl <="80":
+    elif nhdl <=80:
         print("Não-HDL: risco muito alto")
     
-    elif nhdl > "160":
+    elif nhdl > 160:
         print( "Não-HDL: acima da média")
     
     #########################
-    if triglicerides < "150":
+    if triglicerides < 150:
         print( "Triglicerides: está na média")
     
-    elif triglicerides > "150":
+    elif triglicerides > 150:
         print( "Triglicerides: acima da média")
     
     #########################
@@ -870,47 +889,47 @@ def lipidogramaF():
 
 def hidroxivitaminaF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
     
-    if resultado > "20":
+    if resultado > 20:
         print( "Hidroxivitamina: saudável")
     
-    elif resultado < "20":
+    elif resultado < 20:
         print( "Hidroxivitamina: não saudável")
 
 ########################################
 
 def tshF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.38" and resultado<= "5.33":
+    if resultado >=0.38 and resultado<= 5.33:
         print( "TSH: está na média")
-    elif resultado < "0.38":
+    elif resultado < 0.38:
         print( "TSH: abaixo da média")
     
-    elif resultado > "5.33":
+    elif resultado > 5.33:
         print( "TSH: acima da média")
 
 ########################################
 
 def t4_livreF():
     print("Coloque os valores de cada requisito")
-    resultado = input("Resultado: ")
+    resultado = leiaInt("Resultado: ")
     material = input("Material: ")
     metodo = input("Método: ")
 
-    if resultado >="0.54" and resultado<= "1.24":
+    if resultado >=0.54 and resultado<= 1.24:
         print( "T4 Livre: está na média")
-    elif resultado < "0.54":
+    elif resultado < 0.54:
         print( "T4 Livre: abaixo da média")
     
-    elif resultado > "1.24":
+    elif resultado > 1.24:
         print("T4 Livre: acima da média")
 
 ########################################
@@ -925,8 +944,7 @@ def todosF():
     hidroxivitaminaF()
     tshF()
     t4_livreF()
-    exit()
-
+   
 
 
 
