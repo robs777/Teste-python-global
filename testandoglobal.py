@@ -22,6 +22,7 @@ def main():
 
 def sexo():
     while True:
+        print("-"*40)
         print("Informe seu sexo biológico")
         print ("M = masculino // F = feminino")
         paciente = input("Digite M ou F: ")
@@ -47,6 +48,7 @@ def sexo():
 
 def tipo_exameM():
     while True:
+        print('-'*40)
         print("Você gostaria de receber resultados de quais tipos de exame?")
         print("1- Hemograma Completo")
         print("2- Glicemia")
@@ -112,8 +114,13 @@ def leiaInt(msg):
 
 
 def hemograma():
+    print("="*20)
+    print("Hemograma")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     print ("ERITROGRAMA")
+    print("="*20)
     hemacias = leiaInt("Hemácias: ")
     hemoglobina = leiaInt("Hemoglobina: ")
     hematocrito = leiaInt("Hematocrito: ")
@@ -122,8 +129,9 @@ def hemograma():
     conc_hb_corp_media = leiaInt("Conc. Hb. Corp. Média: ")
     RDW = leiaInt("RDW: ")
 
-
+    print("="*20)
     print("LEUCOGRAMA")
+    print("="*20)
     leucocitos = leiaInt("Leucocitos: ")
     metamielócitos = leiaInt("Metamielócitos: ")
     bastonetes = leiaInt("Bastoneres: ")
@@ -135,11 +143,14 @@ def hemograma():
     plaquetas = leiaInt("Plaquetas: ")
 
     if hemacias >=4.5 and hemacias <=6:
+        print("-"*40)
         print( "Hemácias: está na média")
     elif hemacias < 4.5:
+        print("-"*40)
         print( "Hemácias: abaixo da média")
     
     elif hemacias > 6:
+        print("-"*40)
         print( "Hemácias: acima da média")
     
     #########################
@@ -270,11 +281,14 @@ def hemograma():
     #########################
     if plaquetas >=150000 and plaquetas <=450000:
         print( "Plaquetas: está na média")
+        
     elif plaquetas < 150000:
         print( "Plaquetas: abaixo da média")
+        
     
     elif plaquetas > 450000:
         print( "Plaquetas: acima da média")
+        
     
     #########################
 
@@ -286,18 +300,25 @@ def hemograma():
 ########################################
 
 def glicemia():
+    print("="*20)
+    print("Glicemia")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=60 and resultado<= 99:
         print ("Glicemia: está na média")
+        
     elif resultado < 60:
         print ("Glicemia: abaixo da média")
+        
     
     elif resultado > 99:
         print("Glicemia: acima da média")
+        
    
     
     
@@ -309,10 +330,14 @@ def glicemia():
 
 
 def creatina():
+    print("="*20)
+    print("Creatina")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=0.76 and resultado<= 1.24:
         print ("Creatina: está na média")
@@ -325,10 +350,14 @@ def creatina():
 
 ########################################
 def acido_urico():
+    print("="*20)
+    print("Ácido Úrico")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+   
 
     if resultado >=3.7 and resultado<= 7.8:
         print("Ácido úrico: está na média")
@@ -342,10 +371,14 @@ def acido_urico():
 
 ########################################
 def tgo():
+    print("="*20)
+    print("TGO")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
     
     if resultado <= 40:
         print("TGO: na média")
@@ -357,10 +390,14 @@ def tgo():
 ########################################
     
 def tgp():
+    print("="*20)
+    print("TGP")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado <= 58:
         print("TGP: na média")
@@ -372,11 +409,15 @@ def tgp():
 
 ########################################
 def lipidograma():
+    print("="*20)
+    print("Lipidograma")
+    print("="*20)
     colesterol = leiaInt("Colesterol total: ")
     hdl = leiaInt("Colesterol HDL: ")
     ldl = leiaInt("Colesterol LDL: ")
     nhdl = leiaInt("Colesterol Não-HDL: ")
     triglicerides = leiaInt("Triglicerides: ")
+    print("-"*40)
 
     if colesterol <= 190:
         print("Colesterol: na média")
@@ -442,11 +483,14 @@ def lipidograma():
 ########################################
 
 def hidroxivitamina():
+    print("="*20)
+    print("hidroxivitamina")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
-
+    print("="*20)
+    
     
     if resultado > 20:
         print( "Hidroxivitamina: saudável")
@@ -457,10 +501,14 @@ def hidroxivitamina():
 ########################################
 
 def tsh():
+    print("="*20)
+    print("TSH")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=0.38 and resultado<= 5.33:
         print( "TSH: está na média")
@@ -473,11 +521,14 @@ def tsh():
 ########################################
 
 def t4_livre():
+    print("="*20)
+    print("T4 Livre")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
-
+    print("="*20)
+    
     if resultado >=0.54 and resultado<= 1.24:
         print( "T4 Livre: está na média")
     elif resultado < 0.54:
@@ -513,7 +564,8 @@ def todos():
 
 def tipo_exameF():
     while True:
-        print("Você gostaria de cadastrar quais tipos de exame?")
+        print('-'*40)
+        print("Você gostaria de receber resultados de quais tipos de exame?")
         print("1- Hemograma Completo")
         print("2- Glicemia")
         print("3- Creatina")
@@ -524,7 +576,10 @@ def tipo_exameF():
         print("8- 25-Hidroxivitamina D")
         print("9- TSH Ultra Sensível")
         print("10- T4 Livre")
-        print("11 - Opção para cadastrar todos os exames")
+        print("11 - Opção para receber resultados de todos os exames")
+        print("-"*30)
+        print("CASO QUEIRA SAIR, DIGITE: 12")
+        print("-"*30)
 
         paciente = input("Digite sua escolha: ")
 
@@ -553,13 +608,21 @@ def tipo_exameF():
             t4_livreF()
         elif paciente =="11":
             todosF()
+        
+        elif paciente =="12":
+            exit()
         else:
             print(f"Opção {paciente} inválida. Digite Novamente.")
 
 
 def hemogramaF():
+    print("="*20)
+    print("Hemograma")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     print ("ERITROGRAMA")
+    print("="*20)
     hemacias = leiaInt("Hemácias: ")
     hemoglobina = leiaInt("Hemoglobina: ")
     hematocrito = leiaInt("Hematocrito: ")
@@ -568,8 +631,9 @@ def hemogramaF():
     conc_hb_corp_media = leiaInt("Conc. Hb. Corp. Média: ")
     RDW = leiaInt("RDW: ")
 
-
+    print("="*20)
     print("LEUCOGRAMA")
+    print("="*20)
     leucocitos = leiaInt("Leucocitos: ")
     metamielócitos = leiaInt("Metamielócitos: ")
     bastonetes = leiaInt("Bastoneres: ")
@@ -732,10 +796,14 @@ def hemogramaF():
 ########################################
 
 def glicemiaF():
+    print("="*20)
+    print("Glicemia")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=60 and resultado<= 99:
         print ("Glicemia: está na média")
@@ -755,10 +823,14 @@ def glicemiaF():
 
 
 def creatinaF():
+    print("="*20)
+    print("Creatina")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=0.4 and resultado<= 1:
         print ("Creatina: está na média")
@@ -771,10 +843,14 @@ def creatinaF():
 
 ########################################
 def acido_uricoF():
+    print("="*20)
+    print("Ácido Úrico")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=2.8 and resultado<= 6.5:
         print("Ácido úrico: está na média")
@@ -788,10 +864,14 @@ def acido_uricoF():
 
 ########################################
 def tgoF():
+    print("="*20)
+    print("TGO")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
     
     if resultado <= 33:
         print("TGO: na média")
@@ -803,10 +883,14 @@ def tgoF():
 ########################################
     
 def tgpF():
+    print("="*20)
+    print("TGP")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado <= 41:
         print("TGP: na média")
@@ -818,11 +902,15 @@ def tgpF():
 
 ########################################
 def lipidogramaF():
+    print("="*20)
+    print("Lipidograma")
+    print("="*20)
     colesterol = leiaInt("Colesterol total: ")
     hdl = leiaInt("Colesterol HDL: ")
     ldl = leiaInt("Colesterol LDL: ")
     nhdl = leiaInt("Colesterol Não-HDL: ")
     triglicerides = leiaInt("Triglicerides: ")
+    print("-"*40)
 
     if colesterol <= 190:
         print("Colesterol: na média")
@@ -888,10 +976,14 @@ def lipidogramaF():
 ########################################
 
 def hidroxivitaminaF():
+    print("="*20)
+    print("Hidroxivitamina")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     
     if resultado > 20:
@@ -903,10 +995,14 @@ def hidroxivitaminaF():
 ########################################
 
 def tshF():
+    print("="*20)
+    print("TSH")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=0.38 and resultado<= 5.33:
         print( "TSH: está na média")
@@ -919,10 +1015,14 @@ def tshF():
 ########################################
 
 def t4_livreF():
+    print("="*20)
+    print("T4 Livre")
+    print("="*20)
     print("Coloque os valores de cada requisito")
+    print("="*20)
     resultado = leiaInt("Resultado: ")
-    material = input("Material: ")
-    metodo = input("Método: ")
+    print("="*20)
+    
 
     if resultado >=0.54 and resultado<= 1.24:
         print( "T4 Livre: está na média")
